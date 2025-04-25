@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anniversaire 🎉</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversaire 🎉</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🎉 BERSDAY PARTY EN APPROCHE ! 🎂</h1>
-    <p>Rejoins-nous pour fêter ça au Lycée de Suippes !</p>
+    <div class="container">
+        <h1>🎉 Joyeux Anniversaire en approche ! 🎂</h1>
+        <p>Rejoins-nous pour fêter ça au Lycée de Suippes !</p>
 
-    <div id="countdown">
-        <div>
-          <span class="number" id="days">00</span>
-          <span class="label">J</span>
-        </div>
-        <div>
-          <span class="number" id="hours">00</span>
-          <span class="label">H</span>
-        </div>
-        <div>
-          <span class="number" id="minutes">00</span>
-          <span class="label">M</span>
-        </div>
-        <div>
-          <span class="number" id="seconds">00</span>
-          <span class="label">S</span>
-        </div>
-      </div>
+        <div class="container">
+            <h1>Compte à rebours</h1>
+            <div id="countdown">
+              <div class="time-unit">
+                <span class="number" id="days">00</span>
+                <span class="label">Jours</span>
+              </div>
+              <div class="time-unit">
+                <span class="number" id="hours">00</span>
+                <span class="label">Heures</span>
+              </div>
+              <div class="time-unit">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Minutes</span>
+              </div>
+              <div class="time-unit">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Secondes</span>
+              </div>
+            </div>
+          </div>
 
-    <h2>📍 Lieu de la fête</h2>
-    <iframe
-      src="https://www.google.com/maps?q=Lycée+de+Suippes,+Rue+de+la+Croix+En+Chêne,+51600+Suippes,+France&output=embed"
-      width="600"
-      height="450"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>
+        <h2>📍 Lieu de la fête</h2>
+        <iframe src="https://www.google.com/maps?q=Lycée+de+Suippes,+Rue+de+la+Croix+En+Chêne,+51600+Suippes,+France&output=embed" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
