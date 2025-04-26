@@ -35,7 +35,7 @@ header {
 
 h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 3em;
+    font-size: 2.5em;
     color: white;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     margin-bottom: 10px;
@@ -47,7 +47,7 @@ p {
 }
 
 #countdown {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 900;
   color: #ffffff;
   background: rgba(255, 111, 145, 0.7);
@@ -61,16 +61,16 @@ p {
 section {
     background: white;
     width: 90%;
-    max-width: 900px;
+    max-width: 500px;
     margin: 20px auto;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     margin-top: 0;
-    font-size: 2em;
+    font-size: 1.8em;
     color: var(--accent-color);
 }
 
@@ -113,7 +113,7 @@ form button {
     color: white;
     border: none;
     padding: 12px 20px;
-    font-size: 1em;
+    font-size: 1.2em;
     border-radius: 12px;
     cursor: pointer;
     transition: background 0.3s;
@@ -163,4 +163,50 @@ footer {
 @keyframes float {
     0% { transform: translateY(-10vh); }
     100% { transform: translateY(110vh); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    #countdown {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    form input, form textarea {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    form button {
+        font-size: 1.1em;
+        padding: 10px 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .gallery .photos {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .photos img {
+        border-radius: 10px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
 }
