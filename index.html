@@ -1,84 +1,68 @@
-// Countdown
-const countdown = document.getElementById('countdown');
-const eventDate = new Date('May 5, 2025 22:00:00').getTime();
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = eventDate - now;
+    <div class="confetti"></div>
 
-    if (distance < 0) {
-        countdown.innerHTML = "C'est l'heure de la fête 🎉";
-        return;
-    }
+    <header>
+        <h1>Joyeux Anniversaire, Telissa ! 🎉</h1>
+        <p>Nous comptons les secondes jusqu'à ton grand moment...</p>
+        <div id="countdown"></div>
+    </header>
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <section class="lieu">
+        <h2>Lieu de la fête 📍</h2>
+        <p>🎈 Rendez-vous à <strong>1 Rue du Levant, 51600 Somme-Suippe</strong> à 21h45 !</p>
+        <p>👉 Prépare-toi pour une soirée magique ! ✨</p>
 
-    countdown.innerHTML = `${days}J  .  ${hours}H  .  ${minutes}M  .  ${seconds}S`;
-}
-setInterval(updateCountdown, 1000);
+        <!-- Google Maps intégré pour 1 Rue du Levant, 51600 Somme-Suippe -->
+        <div style="margin-top: 20px;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.9290904353293!2d2.292301915738321!3d49.893526679400025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e78665f3d6ef99%3A0x8923ffdb0d24c4f2!2s1%20Rue%20du%20Levant%2C%2051600%20Somme-Suippe!5e0!3m2!1sfr!2sfr!4v1714168946809!5m2!1sfr!2sfr" 
+                width="100%" 
+                height="300" 
+                style="border:0; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
 
-// Messages d'amis
-const messageForm = document.getElementById('messageForm');
-const messagesList = document.getElementById('messagesList');
+      <!--<section class="messages">
+        <h2>Messages d'amour 💌</h2>
+        <form id="contact-form">
+          <input type="text" name="user_name" placeholder="Ton prénom" required>
+          <input type="email" name="user_email" placeholder="Ton email" required>
+          <textarea name="message" placeholder="Ton message..." required></textarea>
+          <button type="submit">Envoyer 💌</button>
+      </form>
 
-messageForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const message = document.getElementById('message').value;
+      <div id="success-message" style="display:none;">Message envoyé avec succès ! 🎉</div>
+    </section>
 
-    const messageDiv = document.createElement('div');
-    messageDiv.innerHTML = `<strong>${name}:</strong> ${message}`;
-    messagesList.appendChild(messageDiv);
+    <section class="video">
+        <h2>Vidéo Surprise 🎥</h2>
+        <button id="playVideo">Voir la surprise</button>
+        <div id="videoContainer" style="display:none;">
+            <video controls width="100%">
+                <source src="Resource/0407(1).mp4" type="video/mp4">
+                Ton navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+    </section>-->
 
-    messageForm.reset();
-});
+    <footer>
+        <p>❤️ Fait avec amour pour toi ❤️</p>
+    </footer>
 
-// Vidéo surprise
-const playButton = document.getElementById('playVideo');
-const videoContainer = document.getElementById('videoContainer');
-
-if (playButton) {
-    playButton.addEventListener('click', function() {
-        videoContainer.style.display = 'block';
-        playButton.style.display = 'none';
-    });
-}
-
-// Confettis en boucle
-function launchConfetti() {
-    confetti({
-        particleCount: 7,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-    });
-    confetti({
-        particleCount: 7,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-    });
-}
-setInterval(launchConfetti, 800);
-
-// Initialise EmailJS
-emailjs.init('service_rhgsonk'); // <-- Mets ton vrai User ID EmailJS ici
-
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm('service_rhgsonk', 'service_rhgsonk', this)
-        .then(function() {
-            console.log('SUCCESS!');
-            document.getElementById('success-message').style.display = 'block';
-            contactForm.reset();
-        }, function(error) {
-            console.log('FAILED...', error);
-            alert('Erreur d\'envoi. Réessaie ! 😢');
-        });
-});
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
