@@ -41,10 +41,10 @@ const playButton = document.getElementById('playVideo');
 const videoContainer = document.getElementById('videoContainer');
 
 if (playButton) {
-    playButton.addEventListener('click', function() {
-        videoContainer.style.display = 'block';
-        playButton.style.display = 'none';
-    });
+  playButton.addEventListener('click', function() {
+    videoContainer.style.display = 'block';
+    playButton.style.display = 'none';
+});
 }
 
 // Confettis en boucle
