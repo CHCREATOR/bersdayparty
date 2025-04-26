@@ -3,41 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anniversaire 🎉</title>
+    <title>Joyeux Anniversaire ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 Joyeux Anniversaire en approche ! 🎂</h1>
-        <p>Rejoins-nous pour fêter ça au Lycée de Suippes !</p>
 
-        <div class="container">
-            <h1>Compte à rebours</h1>
-            <div id="countdown">
-              <div class="time-unit">
-                <span class="number" id="days">00</span>
-                <span class="label">Jours</span>
-              </div>
-              <div class="time-unit">
-                <span class="number" id="hours">00</span>
-                <span class="label">Heures</span>
-              </div>
-              <div class="time-unit">
-                <span class="number" id="minutes">00</span>
-                <span class="label">Minutes</span>
-              </div>
-              <div class="time-unit">
-                <span class="number" id="seconds">00</span>
-                <span class="label">Secondes</span>
-              </div>
-            </div>
-          </div>
+    <div class="confetti"></div>
 
-        <h2>📍 Lieu de la fête</h2>
-        <iframe src="https://www.google.com/maps?q=Lycée+de+Suippes,+Rue+de+la+Croix+En+Chêne,+51600+Suippes,+France&output=embed" 
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+    <header>
+        <h1>Joyeux Anniversaire, [Prénom] ! 🎉</h1>
+        <p>Nous comptons les secondes jusqu'à ton grand moment...</p>
+        <div id="countdown"></div>
+    </header>
 
-    <script src="script.js"></script>
+    <!--<section class="gallery">
+        <h2>Nos souvenirs 📸</h2>
+        <div class="photos">
+            Ajoute ici des balises <img src="image.jpg"> -->
+        </div>
+    </section>
+
+    <section class="messages">
+        <h2>Messages d'amour 💌</h2>
+        <form id="messageForm">
+            <input type="text" id="name" placeholder="Ton nom" required>
+            <textarea id="message" placeholder="Ton message..." required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <div id="messagesList"></div>
+    </section>
+
+    <section class="video">
+        <h2>Vidéo Surprise 🎥</h2>
+        <button id="playVideo">Voir la surprise</button>
+        <div id="videoContainer" style="display:none;">
+            <video controls width="100%">
+                <source src="Resource/0407(1).mp4" type="video/mp4">
+                Ton navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>❤️ Fait avec amour pour toi ❤️</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
