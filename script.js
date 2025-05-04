@@ -1,13 +1,13 @@
 // Countdown
 const countdown = document.getElementById('countdown');
-const eventDate = new Date('May 5, 2025 22:00:00').getTime();
+const eventDate = new Date('05/05/2025 22:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = eventDate - now;
 
     if (distance < 0) {
-        countdown.innerHTML = "C'est l'heure de la fête 🎉";
+        countdown.innerHTML = "C'est la fête 🎉";
         return;
     }
 
@@ -16,7 +16,9 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    countdown.innerHTML = `${days}J  .  ${hours}H  .  ${minutes}M  .  ${seconds}S`;
+    countdown.innerHTML = `${hours}h    ${minutes}m    ${seconds}s`;
+
+    //${hours}h  :  ${minutes}m  :  ${seconds}s
 }
 setInterval(updateCountdown, 1000);
 
