@@ -1,13 +1,13 @@
 // Countdown
 const countdown = document.getElementById('countdown');
-const eventDate = new Date('05/05/2025 22:00').getTime();
+const eventDate = new Date('05/05/2026 22:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = eventDate - now;
 
     if (distance < 0) {
-        countdown.innerHTML = "C'est la fête 🎉";
+        countdown.innerHTML = "Bientôt";
         return;
     }
 
