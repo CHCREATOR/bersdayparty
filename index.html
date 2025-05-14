@@ -8,41 +8,49 @@
 </head>
 <body>
     <div class="confetti"></div>
+
     <nav>
-        <a href="index.html">Accueil</a> |
+        <div class="dropdown">
+            <a href="index.html">Accueil ⏷</a>
+            <div class="dropdown-content">
+                <a href="#lieu">📍 Lieu</a>
+                <a href="#video">🎥 Vidéo</a>
+                <a href="#message">💌 Message</a>
+            </div>
+        </div>
+        |
         <a href="videos.html">Vidéos 🎥</a>
     </nav>
+
     <header>
-        <h1>birthday Party, Telissa ! 🎉</h1>
-        <p>GO LES 18ANS! </p>
+        <h1>Birthday Party, Telissa ! 🎉</h1>
+        <p>GO LES 18 ANS !</p>
         <div id="countdown"></div>
     </header>
 
-   <!-- <section class="lieu">
-        <h2>Lieu de la fête 📍</h2>
-        <p>🎈 Rendez-vous à <strong>Somme-Suippe ce soir </strong> à 22h00 !</p>
-        <p>👉 Prépare-toi pour une soirée magique ! ✨</p> 
+    <section id="lieu">
+        <h2>📍 Lieu de la fête</h2>
+        <p>🎈 Rendez-vous à <strong>Somme-Suippe</strong> ce soir à 22h00 !</p>
+        <p>👉 Prépare-toi pour une soirée magique ! ✨</p>
 
-        Google Maps intégré pour 1 Rue du Levant, 51600 Somme-Suippe
-        <div style="margin-top: 20px;">
+        <div class="map-container">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.9290904353293!2d2.292301915738321!3d49.893526679400025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e78665f3d6ef99%3A0x8923ffdb0d24c4f2!2s1%20Rue%20du%20Levant%2C%2051600%20Somme-Suippe!5e0!3m2!1sfr!2sfr!4v1714168946809!5m2!1sfr!2sfr" 
                 width="100%" 
                 height="300" 
-                style="border:0; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" 
+                style="border:0; border-radius: 20px;" 
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-    </section> -->
+    </section>
 
-    <section class="video">
-        <h2>Nouvelle vidéo dispo dans [Vidéos🎥] en haut</h2>
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+    <section id="video">
+        <h2>🎥 Vidéo Surprise</h2>
+        <div class="video-container">
             <iframe 
                 src="" 
-                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
@@ -50,29 +58,16 @@
         </div>
     </section>
 
-      <!--<section class="messages">
-        <h2>Messages d'amour 💌</h2>
+    <section id="message">
+        <h2>💌 Message d'amour</h2>
         <form id="contact-form">
-          <input type="text" name="user_name" placeholder="Ton prénom" required>
-          <input type="email" name="user_email" placeholder="Ton email" required>
-          <textarea name="message" placeholder="Ton message..." required></textarea>
-          <button type="submit">Envoyer 💌</button>
-      </form>
-
-      <div id="success-message" style="display:none;">Message envoyé avec succès ! 🎉</div>
+            <input type="text" name="user_name" placeholder="Ton prénom" required>
+            <input type="email" name="user_email" placeholder="Ton email" required>
+            <textarea name="message" placeholder="Ton message..." required></textarea>
+            <button type="submit">Envoyer 💌</button>
+        </form>
+        <div id="success-message" style="display:none;">Message envoyé avec succès ! 🎉</div>
     </section>
-
-  <!--  <section class="video">
-        <h2>Vidéo Surprise 🎥</h2>
-        <button id="playVideo">Voir la surprise</button>
-        <div id="videoContainer" style="display:none;">
-            <video controls width="100%">
-                <source src="Resource/0407(1).mp4" type="video/mp4">
-                Ton navigateur ne supporte pas la vidéo.
-            </video>
-        </div>
-    </section> -->
-    
 
     <footer>
         <p>❤️ Fait pour toi ❤️</p>
