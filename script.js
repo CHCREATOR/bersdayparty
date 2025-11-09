@@ -41,13 +41,14 @@
 const anniversaires = [
     { nom: "Julie", date: "09-01" },       // 9 Janvier
     { nom: "Charly", date: "15-03" },      // 15 Mars (toi)
-    { nom: "Roman", date: "22-03" },
+    { nom: "Romane", date: "22-03" },
+    { nom: "Telissa", date: "14-05" },
     { nom: "Manon", date: "14-05" },
     { nom: "Zoé", date: "04-06" },
     { nom: "Constance", date: "08-06" },
     { nom: "Hugo", date: "06-10" },
     { nom: "Zozo", date: "30-10" },
-    { nom: "Mathis", date: "30-11" },
+    { nom: "Matys", date: "30-11" },
 ];
 
 /* Helper : transforme "JJ-MM" en Date pour l'année donnée */
