@@ -274,3 +274,69 @@ footer {
         padding: 5px 10px; /* ajout de padding pour toucher facilement */
     }
 }
+
+/* Espacement propre des liens dans la barre de navigation */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 10px 15px; /* padding pour agrandir la zone cliquable */
+    transition: color 0.3s, transform 0.2s;
+    position: relative;
+}
+
+/* Ajouter un séparateur léger entre chaque lien */
+nav a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px; /* épaisseur du séparateur */
+    height: 60%; /* hauteur du séparateur */
+    background-color: rgba(255, 255, 255, 0.5); /* couleur semi-transparente */
+}
+
+/* Hover et active restent inchangés */
+nav a:hover,
+nav a.active {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Mettre le lien Calendrier tout à droite et style bouton */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* espace entre les liens à gauche et le bouton à droite */
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    padding: 15px 35px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Conteneur des liens à gauche */
+nav .left-links {
+    display: flex;
+    gap: 25px;
+}
+
+/* Style “bouton” pour le lien Calendrier */
+nav a.active {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav a.active:hover {
+    background-color: var(--accent-color-dark);
+    transform: scale(1.05);
+}
+
