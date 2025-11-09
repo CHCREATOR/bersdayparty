@@ -174,3 +174,34 @@ footer {
     text-align: center;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.3);
 }
+
+/* ⏱️ Compteur anniversaire */
+#countdown {
+    margin: 25px auto;
+    font-size: 4em;
+    font-weight: 1000;
+    color: white;
+    background: rgba(0,0,0,0.25);
+    padding: 25px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+}
+
+#countdown span {
+    display: inline-block;
+    min-width: 70px;
+}
+
+@media (max-width: 768px) {
+    #countdown {
+        font-size: 1.5em;
+        padding: 12px 20px;
+    }
+    #countdown span {
+        min-width: 50px;
+    }
+}
+
