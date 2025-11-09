@@ -205,3 +205,72 @@ footer {
     }
 }
 
+/* 🗓️ Calendrier des anniversaires */
+.calendrier {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.mois {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: white;
+}
+
+.mois:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.mois h2 {
+    font-family: 'Pacifico', cursive;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.mois ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mois li {
+    background: rgba(255, 255, 255, 0.25);
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.mois li:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* 📱 Ajustements pour mobile */
+@media (max-width: 768px) {
+    nav {
+        padding: 8px 15px; /* moins de padding */
+        border-radius: 15px;
+        gap: 12px; /* moins d'espacement entre les liens */
+        flex-wrap: wrap; /* permet aux liens de passer à la ligne si nécessaire */
+    }
+
+    nav a {
+        font-size: 1em; /* texte plus petit */
+        padding: 5px 10px; /* ajout de padding pour toucher facilement */
+    }
+}
