@@ -2,7 +2,7 @@
 // 🎉 Countdown
 // ================================
 const countdown = document.getElementById('countdown');
-const eventDate = new Date('11/08/2025 22:00').getTime();
+const eventDate = new Date('04/15/2026 22:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
