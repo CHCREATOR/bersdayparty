@@ -39,7 +39,6 @@
 
 /* --- Liste des anniversaires : utiliser format "JJ-MM" pour répétition annuelle --- */
 const anniversaires = [
-    { nom: "Julie", date: "09-01" },       // 9 Janvier
     { nom: "Charly", date: "15-03" },      // 15 Mars (toi)
     { nom: "Romane", date: "22-03" },
     { nom: "Telissa", date: "14-05" },
@@ -222,3 +221,4 @@ if (contactForm && typeof emailjs !== 'undefined' && emailjs && typeof emailjs.s
 } else {
     console.log('EmailJS non configuré ou contact-form absent — envoi désactivé.');
 }
+
